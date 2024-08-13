@@ -39,6 +39,6 @@
 </div>  
 <div align="left">
 <a href="https://harshavardhanjo.com" target="_blank">
-<img src=https://img.shields.io/badge/website-%231E77B5.svg?&style=for-the-badge&logo=website&logoColor=white alt=website style="margin-bottom: 5px;" />
+<img src=https://img.shields.io/badge/my%20website-%eb5690.svg?&style=for-the-badge&logo=google-chrome&logoColor=white alt=website style="margin-bottom: 5px;" />
 </a>  
 </div>
