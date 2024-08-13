@@ -1,12 +1,8 @@
-### You have arrived at the hometown of Harshavardhanjo  
+### You have arrived at the hometown of Harshavardhanjo
 
- 
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Harshavardhanjo&layout=compact&theme=highcontrast&langs_count=10&hide=ShaderLab,LLVM) 
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Harshavardhanjo&layout=compact&theme=highcontrast&langs_count=10&hide=ShaderLab,LLVM)
 </br>![Harshavardhanjo github stats](https://github-readme-stats.vercel.app/api?username=Harshavardhanjo&show_icons=true&theme=highcontrast)
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Harshavardhanjo&theme=dark&ring=DD0000&background=000000&stroke=FFEC00&dates=18DDD5)](https://git.io/streak-stats)
-
-
 
 ## Languages and Frameworks:
 
@@ -33,14 +29,16 @@
 <br/>
 <br/>
 <br/>
+
 ## Connect with me:
+
 <div align="left">
 <a href="https://www.linkedin.com/in/harshavardhan-jothi-kumar-259ba8185/" target="_blank">
 <img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
 </a>  
 </div>  
 <div align="left">
-<a href="https://www.linkedin.com/in/harshavardhan-jothi-kumar-259ba8185/](https://harshavardhanjo.com" target="_blank">
-<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+<a href="https://harshavardhanjo.com" target="_blank">
+<img src=https://img.shields.io/badge/website-%231E77B5.svg?&style=for-the-badge&logo=website&logoColor=white alt=website style="margin-bottom: 5px;" />
 </a>  
-</div> 
+</div>
