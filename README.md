@@ -66,7 +66,16 @@
     <td align="center" valign="top">
         <h3>⏳ Weekly Coding Activity</h3>
         <!--START_SECTION:waka-->
-        <!--END_SECTION:waka-->
+
+```python
+From: 05 December 2025 - To: 12 December 2025
+
+Total Time: 0 secs
+
+No activity tracked
+```
+
+<!--END_SECTION:waka-->
     </td>
   </tr>
   <tr>
