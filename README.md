@@ -33,14 +33,7 @@
 
 <br />
 
-<!-- Trophies -->
-<div align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=Harshavardhanjo&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4" alt="Trophies" />
-  </a>
-</div>
 
-<br /><br />
 
 <!-- Stats Dashboard -->
 <table align="center" border="0" cellpadding="0" cellspacing="0">
@@ -81,7 +74,7 @@ No activity tracked
   <tr>
       <td align="center" valign="top">
         <br />
-        <img src="https://github-readme-streak-stats.herokuapp.com?user=Harshavardhanjo&theme=tokyonight&hide_border=true" alt="Streak Stats" />
+        <img src="https://streak-stats.demolab.com?user=Harshavardhanjo&theme=tokyonight&hide_border=true" alt="Streak Stats" />
       </td>
   </tr>
 </table>
