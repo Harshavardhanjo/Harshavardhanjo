@@ -1,96 +1,29 @@
-<!--
-  Harshavardhan Jothikumar
-  Production AI Engineer · Healthcare AI · Voice/LLM · Agents
--->
+# Harshavardhan Jothikumar
 
-<div align="center">
+I build real-time voice and LLM systems — the kind where the audio thread has a 20ms deadline and the model behind it answers on a budget measured in seconds. Most of my working time goes into the scheduling problem that sits between those two facts.
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=700&size=26&pause=1500&color=7AA2F7&center=true&vCenter=true&width=700&lines=Production+AI+Engineer;Healthcare+AI+%C2%B7+Voice+%C2%B7+LLM+Agents;Founding+Engineer+%E2%80%A2+Mantys+(YC+W23)" alt="Typing SVG" />
+Senior SDE at Mynaksh, on real-time voice infrastructure: WebRTC/VoIP transport, streaming speech recognition and synthesis, and the conversation layer that decides when an agent should speak and when it should stop. Before that, founding engineer at Mantys (YC W23) and on the founding team at Reachgig.
 
-<p>
-  <samp>
-    Building production LLM systems — eval frameworks, voice agents, healthcare automation.<br/>
-    Previously: 98% accuracy LLM evals across 120K medical procedures at a YC W23 startup.
-  </samp>
-</p>
+## What I've built
 
-<p>
-  <a href="https://www.linkedin.com/in/harshavardhan-jothi-kumar-259ba8185/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  &nbsp;
-  <a href="https://harshavardhanjo.com" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-100000?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
-  </a>
-  &nbsp;
-  <a href="mailto:harshavardhanjo@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-</p>
+**A voice product from empty repository to paid live service in about six weeks**, across five services. Holding a 20ms audio cadence against second-scale model latency means everything downstream of the LLM streams and everything upstream of the speaker runs to a deadline; there is no slack anywhere in the middle. Billing was per-minute against a wallet, which made correctness on call teardown a revenue problem rather than a cleanup detail.
 
-</div>
+**Transport work below the SDK boundary** — SRTP/DTLS/ICE, STUN/TURN, Opus over RTP, jitter buffering. The debugging case I'd pick if you asked for one: every call was dying at exactly ten minutes. The cause was a credential-refresh timer in a TURN layer scoped globally instead of per channel, so the second channel inherited the first channel's expiry. Found it by tracing inside the library in production, since the symptom was invisible from the outside, and shipped a vendored patch.
+
+**Interruption handling that tracks what the caller actually heard.** Naive barge-in cuts on voice activity and assumes the transcript agrees with the audio the user received; it doesn't, because synthesis runs ahead of playback. Resolving that at sentence granularity is most of the difference between an agent that feels conversational and one that talks over people. Streaming STT and TTS across 11 languages.
+
+**Money-critical paths**: wallet and ledger design, idempotent settlement, recovering call state when a vendor SDK dropped it mid-session, and the unit-economics model underneath the pricing.
+
+**LLM evaluation at a production bar.** At Mantys, an evaluation framework for clinical prior-authorisation validated at 98% extraction accuracy, along with the retrieval and extraction pipeline it graded.
+
+**Performance work by measurement, not intuition.** A 7-second screen render taken to imperceptible after counting the work instead of guessing at it: 21,780 redundant translation lookups in one file reduced to 330, across 145 call sites.
+
+## Tools
+
+Python and TypeScript daily — asyncio, FastAPI, Celery, PyAV/Opus. Go, Java, C++ and Kotlin as the problem calls for them. Postgres, Redis, BullMQ/SQS, ECS/Lambda, Docker, Grafana/Loki, pgvector.
+
+B.Tech CSE, VIT Chennai.
 
 ---
 
-### 🛠 What I'm building
-
-- **Real-time voice + LLM systems** at Mynaksh — WebRTC/VoIP infrastructure, agentic conversation flows, AI-driven onboarding.
-- Previously at **Mantys (YC W23)** — production LLM eval framework reaching 98% extraction accuracy, prior-auth automation across 120K medical procedures, $2.3M in claims recovered.
-
-Currently going deep on: **agent observability, voice infra, healthcare AI**.
-
----
-
-### 💻 Stack I actually ship with
-
-<div align="center">
-
-**AI / LLM**
-
-<img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" />
-<img src="https://img.shields.io/badge/Anthropic-D4A373?style=for-the-badge&logoColor=white" />
-<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
-<img src="https://img.shields.io/badge/RAG_%2F_pgvector-336791?style=for-the-badge&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
-
-<br/><br/>
-
-**Backend**
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
-<img src="https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white" />
-<img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
-
-<br/><br/>
-
-**Real-time & Automation**
-
-<img src="https://img.shields.io/badge/WebRTC-333333?style=for-the-badge&logo=webrtc&logoColor=white" />
-<img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" />
-<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" />
-
-<br/><br/>
-
-**Cloud & Frontend**
-
-<img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
-<img src="https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-
-</div>
-
----
-
-### 📊 GitHub
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Harshavardhanjo&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="160" alt="Github Stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Harshavardhanjo&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="160" alt="Top Languages" />
-
-</div>
+[harshavardhanjo.com](https://harshavardhanjo.com) · [LinkedIn](https://www.linkedin.com/in/harshavardhan-jothi-kumar-259ba8185/)
