@@ -19,7 +19,7 @@
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   &nbsp;
-  <a href="https://havardhanjo.com" target="_blank">
+  <a href="https://harshavardhanjo.com" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-100000?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
   </a>
   &nbsp;
@@ -38,8 +38,6 @@
 - Previously at **Mantys (YC W23)** — production LLM eval framework reaching 98% extraction accuracy, prior-auth automation across 120K medical procedures, $2.3M in claims recovered.
 
 Currently going deep on: **agent observability, voice infra, healthcare AI**.
-
-Open to: founding/senior engineer roles at AI-native companies. Especially healthcare AI, voice agents, and LLM evals/observability.
 
 ---
 
@@ -95,10 +93,4 @@ Open to: founding/senior engineer roles at AI-native companies. Especially healt
 <img src="https://github-readme-stats.vercel.app/api?username=Harshavardhanjo&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="160" alt="Github Stats" />
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Harshavardhanjo&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="160" alt="Top Languages" />
 
-</div>
-
----
-
-<div align="center">
-  <samp>Looking for senior/founding engineer roles in AI · Healthcare · Voice · Agents</samp>
 </div>
