@@ -22,13 +22,13 @@ Senior SDE at Mynaksh, on real-time voice infrastructure: WebRTC/VoIP transport,
 
 Three clean-room benchmarks, one per layer of a real-time voice path, in the order audio moves through them. They share one statistics package, so a p99 in one means the same thing in the others.
 
-**[cadence-bench](https://github.com/Harshavardhanjo/cadence-bench)** — the send side. Whether a loop can hand the transport a frame every 20ms under CPU and GC pressure, across four ways of writing that loop. The one almost everyone writes first drifts without bound, and it only shows under load. The harness measures the host's clock first and refuses to report figures the clock cannot resolve. CI measures it on Linux, macOS and Windows.
+**[cadence-bench](https://github.com/Harshavardhanjo/cadence-bench)** — the send side. Whether a loop can hand the transport a frame every 20ms under CPU and GC pressure, across four ways of writing that loop. The one almost everyone writes first drifts without bound, and it only shows under load. The harness measures the host's clock first and refuses to report figures the clock cannot resolve. CI measures it on Linux, macOS and Windows. [Measure your own browser](https://cadence-bench.harshavardhanjo.com).
 
 **[jitter-bench](https://github.com/Harshavardhanjo/jitter-bench)** — the receive side. How much latency a jitter buffer has to add to keep audio continuous, traced as a curve across synthetic network conditions, with an RFC 3550 adaptive policy placed on it. Late discards are counted separately from network loss, because those are packets the buffer chose to lose. [Try it in the browser](https://jitter-bench.harshavardhanjo.com).
 
 **[turn-bench](https://github.com/Harshavardhanjo/turn-bench)** — the conversation layer. When a caller talks over an agent, the agent decides when to stop speaking and what to record as having been said. Synthesis runs ahead of playback, so the second decision can quietly fill the transcript with words the caller never heard. [Try it in the browser](https://turn-bench.harshavardhanjo.com).
 
-The browser UIs run the same Go code compiled to WebAssembly, so a chart cannot disagree with the command-line tables.
+The browser UIs run the same Go code compiled to WebAssembly, so a chart cannot disagree with the command-line tables. cadence-bench's is the exception that proves the rule: it measures rather than simulates, so it measures the browser, and it says so.
 
 Also public: [RAG-chatbot](https://github.com/Harshavardhanjo/RAG-chatbot), PDF ingestion and pgvector retrieval added to Vercel's chat template, and [astrochat](https://github.com/Harshavardhanjo/astrochat), a React Native chat UI with gesture-driven replies and reactions.
 
