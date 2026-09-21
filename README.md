@@ -28,7 +28,7 @@ Three clean-room benchmarks, one per layer of a real-time voice path, in the ord
 
 **[turn-bench](https://github.com/Harshavardhanjo/turn-bench)** — the conversation layer. When a caller talks over an agent, the agent decides when to stop speaking and what to record as having been said. Synthesis runs ahead of playback, so the second decision can quietly fill the transcript with words the caller never heard. [Try it in the browser](https://turn-bench.harshavardhanjo.com).
 
-The browser UIs run the same Go code compiled to WebAssembly, so a chart cannot disagree with the command-line tables. cadence-bench's is the exception that proves the rule: it measures rather than simulates, so it measures the browser, and it says so.
+The browser UIs run the same Go code compiled to WebAssembly, so a chart cannot disagree with the command-line tables. cadence-bench's is the exception: it measures rather than simulates, so what it measures is your browser, and the page says so.
 
 Also public: [RAG-chatbot](https://github.com/Harshavardhanjo/RAG-chatbot), PDF ingestion and pgvector retrieval added to Vercel's chat template, and [astrochat](https://github.com/Harshavardhanjo/astrochat), a React Native chat UI with gesture-driven replies and reactions.
 
